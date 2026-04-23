@@ -27,7 +27,7 @@ font() {
 
 arch() {
 	sudo pacman -Syu
-	#(sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si)
+	(sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si)
 	yay -Syu "${PACKAGES[@]}"
 }
 
@@ -52,6 +52,7 @@ essentialpackages() {
 
 ohmyzsh() {
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  cp -i ./dotfiles/.zshrc ~/.zshrc
 }
 
 gotocases() {
