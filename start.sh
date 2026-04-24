@@ -7,6 +7,7 @@ PACKAGES=(
     autotiling curl xorg-xrandr picom docker
     docker-compose dysk kitty python tree
     obsidian git unzip net-tools ripgrep
+	gedit neofetch xclip lua-jsregexp
 )
 
 get_distro() {
