@@ -14,6 +14,13 @@ get_distro() {
     echo "$ID"
 }
 
+neovim() {
+	git clone https://github.com/Welepy-dev/dotfiles-and-instalation-script.git ~/temp
+	cp -r ~/temp/dotfiles/nvim ~/.config/nvim
+	cd ~
+	rm -rf ~/temp
+	nvim
+}
 
 font() {
 	curl -L -o JetBrainsMono.zip https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip?_gl=1*emzzv4*_gcl_au*MTI5MTA2OTAxNy4xNzc2NzkyNjcx*FPAU*MTI5MTA2OTAxNy4xNzc2NzkyNjcx*_ga*MTYwOTg3MjYxNC4xNzc2NzkyNjcx*_ga_9J976DJZ68*czE3NzY3OTUyNjkkbzIkZzEkdDE3NzY3OTUzNDUkajUzJGwwJGgw
@@ -65,6 +72,7 @@ gotocases() {
 		*2*) 
 			font ;;
 		*3*)	ohmyzsh ;;
+		*4*)	neovim ;;
 		*)
 			echo "Configuration not available yet." ;;
 	esac
@@ -78,6 +86,7 @@ prompt() {
 		echo "1 - Essential packages."
 		echo "2 - JetBrains Mono Font."
 		echo "3 - Oh-My-Zsh."
+		echo "4 - Neovim."
 		read -p "Options to include (eg: '1 2 3', '1-3'): " options
 		if [[ "$options" =~ ^[0-9\ -]+$ ]]; then
 			gotocases $options
