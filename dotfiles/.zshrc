@@ -41,9 +41,9 @@ git_prompt_info() {
 
 exit_status() {
   if [[ $LAST_EXIT -eq 0 ]]; then
-    echo " %F{green}- [✔ 0]%f"
+    echo "%F{green}[✔ 0]%f"
   else
-    echo " %F{red}- [✖ $LAST_EXIT]%f"
+    echo "%F{red}[✖ $LAST_EXIT]%f"
   fi
 }
-PS1=$'%F{cyan}┌[%n#%m]%f-%F{yellow}(%~)%f-$(git_prompt_info)$(exit_status)\n%F{cyan}└>%f '
+PS1=$'%F{cyan}┌[%n#%m]%f - %F{yellow}(%~)%f - $(git_prompt_info)$(exit_status)\n%F{cyan}└>%f '
