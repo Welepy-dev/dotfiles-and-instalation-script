@@ -8,7 +8,7 @@ PACKAGES=(
     docker-compose dysk kitty python tree
     obsidian git unzip net-tools ripgrep
     gedit neofetch xclip lua-jsregexp 
-    imagemagick scrot
+    imagemagick scrot python-pip tmux meson ninja
 )
 
 get_distro() {
