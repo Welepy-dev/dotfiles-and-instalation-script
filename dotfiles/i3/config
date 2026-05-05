@@ -165,7 +165,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+Shift+l exec --no-startup-id $i3lockwall
+bindsym $mod+Shift+l exec i3lock --color 000000
+#--no-startup-id $i3lockwall
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -200,9 +201,11 @@ bar {
         status_command i3status
 }
 
-exec_always --no-startup-id feh --bg-scale /home/welepy/Downloads/back3.jpg
+exec_always --no-startup-id feh --bg-scale /home/welepy/Downloads/back.png
 exec_always xrandr --output Virtual-1 --mode 1920x1080
 #exec_always --no-startup-id picom --experimental-backends
 exec_always --no-startup-id autotiling
+exec_always --no-startup-id sleep 2 && ~/Documents/dotfiles-and-instalation-script/sync_folders.sh
+
 
 
