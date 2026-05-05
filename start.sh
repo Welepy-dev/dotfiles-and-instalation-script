@@ -62,23 +62,33 @@ essentialpackages() {
 ohmyzsh() {
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   cp -i ./dotfiles/.zshrc ~/.zshrc
+  source ~/.zshrc
 }
 
 gotocases() {
 	case $1 in
 		*0*)
 			echo "Warning, this is only advisable when you just installed a fresh OS"
-			essentialpackages && font ;;			
+			essentialpackages && font && ohmyzsh && neovim ;;			
 		*1*)
 			essentialpackages ;;
 		*2*) 
 			font ;;
-		*3*)	ohmyzsh ;;
-		*4*)	neovim ;;
+		*3*)
+			ohmyzsh ;;
+		*4*)
+			kitty_term ;;
+		*5*)
+			neovim ;;
 		*)
 			echo "Configuration not available yet." ;;
 	esac
 	
+}
+
+kitty_term() {
+	cp -i ./dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
+	exit
 }
 
 prompt() {
@@ -88,7 +98,8 @@ prompt() {
 		echo "1 - Essential packages."
 		echo "2 - JetBrains Mono Font."
 		echo "3 - Oh-My-Zsh."
-		echo "4 - Neovim."
+		echo "4 - Kitty."
+		echo "5 - Neovim."
 		read -p "Options to include (eg: '1 2 3', '1-3'): " options
 		if [[ "$options" =~ ^[0-9\ -]+$ ]]; then
 			gotocases $options
