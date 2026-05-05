@@ -10,17 +10,17 @@ map("i", "jk", "<ESC>")
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
-keymap("n", "<C-Left>", "<cmd>TmuxNavigateLeft<CR>", opts)
-keymap("i", "<C-Left>", "<Esc><cmd>TmuxNavigateLeft<CR>", opts)
-
-keymap("n", "<C-Right>", "<cmd>TmuxNavigateRight<CR>", opts)
-keymap("i", "<C-Right>", "<Esc><cmd>TmuxNavigateRight<CR>", opts)
-
-keymap("n", "<C-Up>", "<cmd>TmuxNavigateUp<CR>", opts)
-keymap("i", "<C-Up>", "<Esc><cmd>TmuxNavigateUp<CR>", opts)
-
-keymap("n", "<C-Down>", "<cmd>TmuxNavigateDown<CR>", opts)
-keymap("i", "<C-Down>", "<Esc><cmd>TmuxNavigateDown<CR>", opts)
+-- keymap("n", "<C-Left>", "<cmd>TmuxNavigateLeft<CR>", opts)
+-- keymap("i", "<C-Left>", "<Esc><cmd>TmuxNavigateLeft<CR>", opts)
+--
+-- keymap("n", "<C-Right>", "<cmd>TmuxNavigateRight<CR>", opts)
+-- keymap("i", "<C-Right>", "<Esc><cmd>TmuxNavigateRight<CR>", opts)
+--
+-- keymap("n", "<C-Up>", "<cmd>TmuxNavigateUp<CR>", opts)
+-- keymap("i", "<C-Up>", "<Esc><cmd>TmuxNavigateUp<CR>", opts)
+--
+-- keymap("n", "<C-Down>", "<cmd>TmuxNavigateDown<CR>", opts)
+-- keymap("i", "<C-Down>", "<Esc><cmd>TmuxNavigateDown<CR>", opts)
 
 -- Salvar, sair
 keymap("n", "<leader>w", ":w<CR>", opts)
