@@ -14,9 +14,12 @@ vim.opt.mouse = "a"             -- ativa o rato
 vim.opt.encoding = "utf-8"      -- codificação
 vim.opt.hlsearch = true         -- realça resultados da pesquisa
 vim.opt.incsearch = true        -- pesquisa incremental
-vim.opt.scrolloff = 6           -- contexto acima/abaixo do cursor
+vim.opt.scrolloff = 8           -- contexto acima/abaixo do cursor
 vim.opt.softtabstop = 0
 vim.opt.wrap = false
+vim.opt.cmdheight = 0
+vim.opt.laststatus = 0
+
 
 -- Cursor shape and blinking behavior
 vim.opt.guicursor = {
