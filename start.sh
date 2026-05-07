@@ -4,7 +4,7 @@
 
 PACKAGES=(
     feh firefox ncdu nvim zsh btop flameshot
-    autotiling curl xorg-xrandr picom docker
+    autotiling curl xorg-xrandr picom docker bat
     docker-compose dysk kitty python tree
     obsidian git unzip net-tools ripgrep
     gedit neofetch xclip lua-jsregexp 

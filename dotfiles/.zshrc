@@ -47,3 +47,6 @@ exit_status() {
   fi
 }
 PS1=$'%F{cyan}┌[%n#%m]%f - %F{yellow}(%~)%f - $(git_prompt_info)$(exit_status)\n%F{cyan}└>%f '
+
+
+alias cat=bat

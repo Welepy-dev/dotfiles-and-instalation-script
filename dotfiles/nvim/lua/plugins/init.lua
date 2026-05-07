@@ -5,7 +5,6 @@ return {
 		event = 'BufWritePre', -- uncomment for format on save
 		opts = require "configs.conform",
 	},
-
 	{
 		"sindrets/diffview.nvim",
 		dependencies = {
