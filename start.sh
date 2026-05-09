@@ -7,7 +7,7 @@ PACKAGES=(
     autotiling curl xorg-xrandr picom docker bat
     docker-compose dysk kitty python tree
     obsidian git unzip net-tools ripgrep
-    gedit neofetch xclip lua-jsregexp 
+    gedit neofetch xclip lua-jsregexp nodejs npm nvm
     imagemagick scrot python-pip tmux meson ninja
 )
 
