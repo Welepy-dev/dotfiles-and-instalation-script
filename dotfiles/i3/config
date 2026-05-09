@@ -228,7 +228,7 @@ bar {
         }
 }
 
-exec_always --no-startup-id feh --bg-scale /home/welepy/Downloads/background.png
+exec_always --no-startup-id feh --bg-scale /home/welepy/Downloads/jjk.png
 exec_always xrandr --output Virtual-1 --mode 1920x1080
 #exec_always --no-startup-id picom --experimental-backends
 exec_always --no-startup-id autotiling
