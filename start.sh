@@ -6,7 +6,7 @@ PACKAGES=(
     feh firefox ncdu nvim zsh btop flameshot
     autotiling curl xorg-xrandr picom docker bat
     docker-compose dysk kitty python tree rsync
-    obsidian git unzip net-tools ripgrep
+    obsidian git unzip net-tools ripgrep pavucontroll
     gedit neofetch xclip lua-jsregexp nodejs npm nvm
     imagemagick scrot python-pip tmux meson ninja
 )
